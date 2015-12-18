@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MyCoffee</title>
+  <%#= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<!-- logo -->
+<%= render :partial => "homes/logo" %>
+	<nav>
+	<!-- menu -->
+	<%= render :partial => "homes/menu" %>
+	</nav>
+	<!-- coffee-header -->
+	<%= render :partial => "homes/header" %>
+	<section id="content">
+			<%= yield %>	
+	</section>
+	<!-- footer -->	
+	<%= render partial: "homes/footer" %>
+</body>
+</html>
